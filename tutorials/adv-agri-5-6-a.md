@@ -1,7 +1,7 @@
 # Advanced Agriculture
 
 ```package
-pxt-climate-action=github:Forward-Education/pxt-climate-action#v1.0.1
+pxt-climate-action=github:Forward-Education/pxt-climate-action
 ```
 
 ## Step 1 @showdialog
@@ -48,7 +48,7 @@ basic.forever(function () {
 
 ## Step 8
 
-Click `||sensors:Sensors||` drag and drop `||sensors:is moisture1 moisture level over 5%||`
+Click `||fwdSensors:Sensors||` drag and drop `||fwdSensors:is moisture1 moisture level over 5%||`
 to replace `||logic:true||` condition of `||logic:if then else||` block.
 
 ```blocks
@@ -90,7 +90,7 @@ basic.forever(function () {
 
 ## Step 11
 
-Click `||motors:Motors||` drag and drop `||motors:run pump for 500||` under
+Click `||fwdMotors:Motors||` drag and drop `||fwdMotors:run pump for 500||` under
 `||basic: :(||` icon.
 
 ```blocks
@@ -106,7 +106,7 @@ basic.forever(function () {
 
 ## Step 12
 
-Click `||basic:basic||` drag and drop `||basic:pause (ms) 100||` block under `||motors:run pump for 500||` block.
+Click `||basic:basic||` drag and drop `||basic:pause (ms) 100||` block under `||fwdMotors:run pump for 500||` block.
 Change the `||basic:100||` to `||basic:500||`
 
 ```blocks
@@ -168,7 +168,7 @@ basic.forever(function () {
 
 ## Step 15
 
-Click `||sensors:Sensors||` drag and drop `||sensors:moisture1 level is over||` block
+Click `||fwdSensors:Sensors||` drag and drop `||fwdSensors:moisture1 level is over||` block
 to replace `||Logic:true||` condition of `||Logic:4 if true then||` blocks.
 
 ```blocks
@@ -194,8 +194,8 @@ basic.forever(function () {
 
 ## Step 16
 
-Click `||sensors:Sensors||` drag and drop `||sensors:set all ledRing1 LEDs to||` block
-under `||sensors:moisture1 level is over||` block.
+Click `||fwdSensors:Sensors||` drag and drop `||fwdSensors:set all ledRing1 LEDs to||` block
+under `||fwdSensors:moisture1 level is over||` block.
 
 ```blocks
 basic.forever(function () {
@@ -221,8 +221,8 @@ basic.forever(function () {
 
 ## Step 17
 
-Click `||sensors:Sensors||` drag and drop `||sensors:set ledRing1 0 to||` block
-under remaining `||sensors:3 moisture1 level is over||` blocks.
+Click `||fwdLights:Lights||` drag and drop `||fwdLights:set ledRing1 0 to||` block
+under remaining `||fwdSensors:3 moisture1 level is over||` blocks.
 
 ```blocks
 basic.forever(function () {
@@ -251,9 +251,9 @@ basic.forever(function () {
 
 ## Step 18
 
-Right click `||sensors:set ledRing1 0||` block and duplicate it. Each
-`||Logic:If||` `||sensors:moisture1 is over||` `||Logic:then||` block
-should have `||sensors:2 set ledRing1 0||` blocks inside the `||Logic:If condition||` block.
+Right click `||fwdLights:set ledRing1 pixel 0||` block and duplicate it. Each
+`||Logic:If||` `||fwdSensors:moisture1 is over||` `||Logic:then||` block
+should have `||fwdLights:2 set ledRing1 pixel 0||` blocks inside the `||Logic:If condition||` block.
 
 ```blocks
 basic.forever(function () {
@@ -285,12 +285,12 @@ basic.forever(function () {
 
 ## Step 19
 
-Change the threshold values of the `||sensors:moisture1 level over||` block
+Change the threshold values of the `||fwdSensors:moisture1 level over||` block
 
--   `||sensors:soilMositure1 level over 80||`
--   `||sensors:soilMositure1 level over 60||`
--   `||sensors:soilMositure1 level over 40||`
--   `||sensors:soilMositure1 level over 20||`
+-   `||fwdSensors:moisture1 level over 80||`
+-   `||fwdSensors:moisture1 level over 60||`
+-   `||fwdSensors:moisture1 level over 40||`
+-   `||fwdSensors:moisture1 level over 20||`
 
 ```blocks
 basic.forever(function () {
@@ -322,17 +322,17 @@ basic.forever(function () {
 
 ## Step 20
 
-Change the `||sensors:LED Ring pixel values||` in pairs.
+Change the `||fwdLights:LED Ring pixel values||` in pairs.
 
 -   Pair 1
--   `||sensors:set ledRing1 0 to 5||`
--   `||sensors:set ledRing1 0 to 4||`
+-   `||fwdLights:set ledRing1 0 to 5||`
+-   `||fwdLights:set ledRing1 0 to 4||`
 -   Pair 2
--   `||sensors:set ledRing1 0 to 3||`
--   `||sensors:set ledRing1 0 to 2||`
+-   `||fwdLights:set ledRing1 0 to 3||`
+-   `||fwdLights:set ledRing1 0 to 2||`
 -   Pair 3
--   `||sensors:set ledRing1 0 to 1||`
--   `||sensors:set ledRing1 0 to 0||`
+-   `||fwdLights:set ledRing1 0 to 1||`
+-   `||fwdLights:set ledRing1 0 to 0||`
 
 ```blocks
 basic.forever(function () {
