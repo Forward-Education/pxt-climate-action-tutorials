@@ -53,7 +53,7 @@ to replace `||logic:true||` condition of `||logic:if then else||` block.
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)) {
           }
     else {
         }
@@ -67,7 +67,7 @@ Select `||basic: :)||` icon.
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)) {
           basic.showIcon(IconNames.Happy)}
     else {
         }
@@ -81,7 +81,7 @@ Select `||basic: :(||` icon.
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)) {
           basic.showIcon(IconNames.Happy)}
     else {
         basic.showIcon(IconNames.Sad)}
@@ -95,7 +95,7 @@ Click `||motors:Motors||` drag and drop `||motors:run pump for 500||` under
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
         } else {
         basic.showIcon(IconNames.Sad)
@@ -111,11 +111,11 @@ Change the `||basic:100||` to `||basic:500||`
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
         } else {
         basic.showIcon(IconNames.Sad)
-        motors.pump.fwdTimedRun(500)
+        fwdMotors.pump.timedRun(500)
         basic.pause(500)
         basic.clearScreen()
         }
@@ -129,11 +129,11 @@ block under `||basic:pause (ms) 500||` block.
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
         } else {
         basic.showIcon(IconNames.Sad)
-        motors.pump.fwdTimedRun(500)
+        fwdMotors.pump.timedRun(500)
         basic.pause(500)
         basic.clearScreen()
         }
@@ -147,11 +147,11 @@ Click `||Logic:Logic||` drag and drop `||Logic:If true then||` block under
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Sad)
-        motors.pump.fwdTimedRun(500)
+        fwdMotors.pump.timedRun(500)
         basic.pause(500)
         basic.clearScreen()
     }
@@ -173,21 +173,21 @@ to replace `||Logic:true||` condition of `||Logic:4 if true then||` blocks.
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Sad)
-        motors.pump.fwdTimedRun(500)
+        fwdMotors.pump.timedRun(500)
         basic.pause(500)
         basic.clearScreen()
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
     }
 })
 ```
@@ -199,22 +199,22 @@ under `||sensors:moisture1 level is over||` block.
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Sad)
-        motors.pump.fwdTimedRun(500)
+        fwdMotors.pump.timedRun(500)
         basic.pause(500)
         basic.clearScreen()
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
-     lights.ledRing1.fwdSetAllPixelsColour(0xff0000)
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
+     fwdLights.ledRing1.setAllPixelsColor(0xff0000)
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
     }
 })
 ```
@@ -226,25 +226,25 @@ under remaining `||sensors:3 moisture1 level is over||` blocks.
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Sad)
-        motors.pump.fwdTimedRun(500)
+        fwdMotors.pump.timedRun(500)
         basic.pause(500)
         basic.clearScreen()
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
-    lights.ledRing1.fwdSetAllPixelsColour(0xff0000)
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
+    fwdLights.ledRing1.setAllPixelsColor(0xff0000)
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
-    lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
+    fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
-    lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
+    fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
-    lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
+    fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
 })
 ```
@@ -257,28 +257,28 @@ should have `||sensors:2 set ledRing1 0||` blocks inside the `||Logic:If conditi
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Sad)
-        motors.pump.fwdTimedRun(500)
+        fwdMotors.pump.timedRun(500)
         basic.pause(500)
         basic.clearScreen()
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
-    lights.ledRing1.fwdSetAllPixelsColour(0xff0000)
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
+    fwdLights.ledRing1.setAllPixelsColor(0xff0000)
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
-    lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
-    lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
+    fwdLights.ledRing1.setPixelColor(0, 0xff0000)
+    fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
-    lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
-    lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
+    fwdLights.ledRing1.setPixelColor(0, 0xff0000)
+    fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
-    if(sensors.moisture1.isPastThreshold(5, sensors.ThresholdDirection.Over)){
-    lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
-    lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if(fwdSensors.moisture1.isPastThreshold(5, fwdEnums.OverUnder.Over)){
+    fwdLights.ledRing1.setPixelColor(0, 0xff0000)
+    fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
 })
 ```
@@ -294,28 +294,28 @@ Change the threshold values of the `||sensors:moisture1 level over||` block
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Sad)
-        motors.pump.fwdTimedRun(500)
+        fwdMotors.pump.timedRun(500)
         basic.pause(500)
         basic.clearScreen()
     }
-    if (sensors.moisture1.isPastThreshold(80, sensors.ThresholdDirection.Over)) {
-        lights.ledRing1.fwdSetAllPixelsColour(0xff0000)
+    if (fwdSensors.moisture1.isPastThreshold(80, fwdEnums.OverUnder.Over)) {
+        fwdLights.ledRing1.setAllPixelsColor(0xff0000)
     }
-    if (sensors.moisture1.isPastThreshold(60, sensors.ThresholdDirection.Over)) {
-        lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
-        lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if (fwdSensors.moisture1.isPastThreshold(60, fwdEnums.OverUnder.Over)) {
+        fwdLights.ledRing1.setPixelColor(0, 0xff0000)
+        fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
-    if (sensors.moisture1.isPastThreshold(40, sensors.ThresholdDirection.Over)) {
-        lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
-        lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if (fwdSensors.moisture1.isPastThreshold(40, fwdEnums.OverUnder.Over)) {
+        fwdLights.ledRing1.setPixelColor(0, 0xff0000)
+        fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
-    if (sensors.moisture1.isPastThreshold(20, sensors.ThresholdDirection.Over)) {
-        lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
-        lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if (fwdSensors.moisture1.isPastThreshold(20, fwdEnums.OverUnder.Over)) {
+        fwdLights.ledRing1.setPixelColor(0, 0xff0000)
+        fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
 })
 ```
@@ -336,28 +336,28 @@ Change the `||sensors:LED Ring pixel values||` in pairs.
 
 ```blocks
 basic.forever(function () {
-    if (sensors.moisture1.isPastThreshold(50, sensors.ThresholdDirection.Over)) {
+    if (fwdSensors.moisture1.isPastThreshold(50, fwdEnums.OverUnder.Over)) {
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Sad)
-        motors.pump.fwdTimedRun(500)
+        fwdMotors.pump.timedRun(500)
         basic.pause(500)
         basic.clearScreen()
     }
-    if (sensors.moisture1.isPastThreshold(80, sensors.ThresholdDirection.Over)) {
-        lights.ledRing1.fwdSetAllPixelsColour(0xff0000)
+    if (fwdSensors.moisture1.isPastThreshold(80, fwdEnums.OverUnder.Over)) {
+        fwdLights.ledRing1.setAllPixelsColor(0xff0000)
     }
-    if (sensors.moisture1.isPastThreshold(60, sensors.ThresholdDirection.Over)) {
-        lights.ledRing1.fwdSetPixelColour(5, 0xff0000)
-        lights.ledRing1.fwdSetPixelColour(4, 0xff0000)
+    if (fwdSensors.moisture1.isPastThreshold(60, fwdEnums.OverUnder.Over)) {
+        fwdLights.ledRing1.setPixelColor(5, 0xff0000)
+        fwdLights.ledRing1.setPixelColor(4, 0xff0000)
     }
-    if (sensors.moisture1.isPastThreshold(40, sensors.ThresholdDirection.Over)) {
-        lights.ledRing1.fwdSetPixelColour(3, 0xff0000)
-        lights.ledRing1.fwdSetPixelColour(2, 0xff0000)
+    if (fwdSensors.moisture1.isPastThreshold(40, fwdEnums.OverUnder.Over)) {
+        fwdLights.ledRing1.setPixelColor(3, 0xff0000)
+        fwdLights.ledRing1.setPixelColor(2, 0xff0000)
     }
-    if (sensors.moisture1.isPastThreshold(20, sensors.ThresholdDirection.Over)) {
-        lights.ledRing1.fwdSetPixelColour(1, 0xff0000)
-        lights.ledRing1.fwdSetPixelColour(0, 0xff0000)
+    if (fwdSensors.moisture1.isPastThreshold(20, fwdEnums.OverUnder.Over)) {
+        fwdLights.ledRing1.setPixelColor(1, 0xff0000)
+        fwdLights.ledRing1.setPixelColor(0, 0xff0000)
     }
 })
 ```
