@@ -6,7 +6,8 @@
     "dependencies": {},
     "files": [
         "README.md",
-        "tutorials/adv-agri-5-6-a.md"
+        "tutorials/adv-agri-5-6-a.md",
+        "copy.md"
     ],
     "testFiles": [],
     "public": true,
