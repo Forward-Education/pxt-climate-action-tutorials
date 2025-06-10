@@ -7,7 +7,8 @@
     "files": [
         "README.md",
         "tutorials/adv-agri-5-6-a.md",
-        "tutorials/copy.md"
+        "tutorials/copy.md",
+        "tutorials/copy2.md"
     ],
     "testFiles": [],
     "public": true,
